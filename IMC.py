@@ -3,30 +3,30 @@ from tkinter import *
 #   'criar janela'
 
 root = Tk()
-root.grid_rowconfigure(0, weight=1)
-root.grid_columnconfigure(0, weight=1)
+root.grid_rowconfigure(0, weight=5)
+root.grid_columnconfigure(0, weight=5)
 
 #   'Max e Min da Janela'
 
 root.minsize(width=400, height=200)
-root.maxsize(width=600, height=200)
+root.maxsize(width=1000, height=400)
 
 
 #    'IMC'
 def imc():
     if bt1['text']:
-         bt1['text'] = float(in2.get()) / (float(in1.get()) * float(in1.get()))
+         bt1['text'] = round (float(in2.get()) / (float(in1.get()) * float(in1.get())),2)
 
 
 
 
 #   'Criar os Widgets'
 
-lb1 = Label(root, text='Altura',background='#7505D6',foreground='white')
+lb1 = Label(root, text='Altura',background='#7505D6',foreground='white', font='algerian 24')
 in1 = Entry(root, font='algerian 24',background='black',foreground='white')
-lb2 = Label(root, text='Peso',background='#7505D6',foreground='white')
+lb2 = Label(root, text='Peso',background='#7505D6',foreground='white', font='algerian 24')
 in2 = Entry(root, font='algerian 24',background='black',foreground='white')
-bt1 = Button(root, text='IMC', command=imc, background='#7505D6',activebackground='#D62626',foreground='white')
+bt1 = Button(root, text='IMC', command=imc, background='#7505D6',activebackground='#D62626',foreground='white', font='algerian 24')
 lb3 = Label(root, text= "Status", font='algerian 24',background='black',foreground='white')
 
 #   'Organizar os Widgets'
