@@ -31,7 +31,7 @@ lb1 = Label(root, text=0, font='algerian 24', background='#5F0AF5')
 
 #   'organizar widgets'
 
-bt1.grid(row=0, column=0, sticky=NSEW)
+b)t1.grid(row=0, column=0, sticky=NSEW
 bt2.grid(row=0, column=2, sticky=NSEW)
 lb1.grid(row=0, column=1, sticky=NSEW)
 
