@@ -1,4 +1,4 @@
-from lzma import FILTER_LZMA1
+
 from tkinter import *
 
 #criar janela
