@@ -4,22 +4,29 @@ from tkinter import *
 #   'funções'
 
 def entrada(valor):
-    lb['text'] += valor
+    lb1['text'] += valor
 
 #   'criar grades e colunas'
 
 root = Tk()
-root.grid_rowconfigure(0, weight=1)
-root.grid_rowconfigure(0, weight=1)
-root.grid_rowconfigure(0, weight=1)
-root.grid_rowconfigure(0, weight=1)
+root.grid_rowconfigure(0, weight=0)
+root.grid_rowconfigure(1, weight=1)
+root.grid_rowconfigure(2, weight=1)
+root.grid_rowconfigure(3, weight=1)
+root.grid_rowconfigure(4, weight=1)
 
-root.grid_columnconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
 root.grid_columnconfigure(2, weight=1)
-root.grid_columnconfigure(0, weight=1)
-root.grid_columnconfigure(0, weight=1)
-root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(3, weight=1)
+root.grid_columnconfigure(4, weight=1)
+
+
+#   'geometria'
+root.geometry('220x400')
+
+#   'janela.config(bg='')'
+root.minsize(width=300, height=100)
+root.maxsize(width=600, height=600)
 
 
 #   'criar widgets'
@@ -44,23 +51,23 @@ bt16 = Button(root, text='=', font='CASTELLAR', command=lambda: entrada('='))
 
 #   'organizar widgets'
 
-lb1.grid(row=0, column=0, sticky=NSEW)
+lb1.grid(row=0, column=1, sticky=NSEW)
 bt1.grid(row=1, column=1, sticky=NSEW)
 bt2.grid(row=1, column=2, sticky=NSEW)
 bt3.grid(row=1, column=3, sticky=NSEW)
 bt4.grid(row=2, column=1, sticky=NSEW)
-bt5.grid(row=2, column=1, sticky=NSEW)
-bt6.grid(row=2, column=1, sticky=NSEW)
-bt7.grid(row=2, column=1, sticky=NSEW)
-bt8.grid(row=2, column=1, sticky=NSEW)
-bt9.grid(row=2, column=1, sticky=NSEW)
-bt10.grid(row=2, column=1, sticky=NSEW)
-bt11.grid(row=2, column=1, sticky=NSEW)
-bt12.grid(row=2, column=1, sticky=NSEW)
-bt13.grid(row=2, column=1, sticky=NSEW)
-bt14.grid(row=2, column=1, sticky=NSEW)
-bt15.grid(row=2, column=1, sticky=NSEW)
-bt16.grid(row=2, column=1, sticky=NSEW)
+bt5.grid(row=2, column=2, sticky=NSEW)
+bt6.grid(row=2, column=3, sticky=NSEW)
+bt7.grid(row=3, column=1, sticky=NSEW)
+bt8.grid(row=3, column=2, sticky=NSEW)
+bt9.grid(row=3, column=3, sticky=NSEW)
+bt10.grid(row=4, column=2, sticky=NSEW)
+bt11.grid(row=1, column=4, sticky=NSEW)
+bt12.grid(row=2, column=4, sticky=NSEW)
+bt13.grid(row=3, column=4, sticky=NSEW)
+bt14.grid(row=4, column=4, sticky=NSEW)
+bt15.grid(row=4, column=1, sticky=NSEW)
+bt16.grid(row=4, column=3, sticky=NSEW)
 
 
 
