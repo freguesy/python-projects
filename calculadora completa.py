@@ -66,7 +66,7 @@ bt16 = Button(root, text='=', font='CASTELLAR',command= lambda: r(),background='
 
 #   'organizar widgets'
 
-lb1.grid(row=0, column=0, columnspan= 5)
+lb1.grid(row=0, column=0,columnspan= 5)
 lb1.grid(row=0, column=1, sticky=NSEW)
 bt1.grid(row=1, column=1, sticky=NSEW)
 bt2.grid(row=1, column=2, sticky=NSEW)
