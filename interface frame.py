@@ -1,10 +1,9 @@
 from tkinter import *
-import re
-
+import tkinter as tk
 
 #   'criar janela'
 
-root = Tk()
+root = tk.Tk()
 
 
 root.grid_rowconfigure(0, weight=1)
@@ -19,18 +18,16 @@ root.grid_columnconfigure(4, weight=1)
 root.grid_columnconfigure(5, weight=1)
 
 #   'funçao'
-
-
-var = StringVar()
+var =StringVar()
 
 def autocapitalize(*arg):
-    var.set(var.get().capitalize())
-
+    var.set(var.get().title())
+    
 var.trace("w", autocapitalize)
 
 
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 root.configure(bg='black')
 root.title('Cadastro')
 frame1 = LabelFrame(root,text='Dados Pessoais:',bg='black',font=(30),foreground="white")
@@ -44,7 +41,9 @@ frame3 = LabelFrame(root,text='',bg='black',font=(30),foreground="white")
 frame3.grid(row=2, column=0,sticky=NSEW)
 #frame3.grid(row=5, column=2)
 
+
 #   'Frame1'
+
 
 lb1 = Label(frame1, text='Nome:',font='Bahnschrift',background='black',foreground="white").grid(row=0, column=0,sticky=EW)
 in1 = Entry(frame1, font='Bahnschrift',textvariable=var).grid(row=0, column=1,sticky=EW,columnspan=5)
@@ -80,11 +79,13 @@ in9 = Entry(frame2, font='Bahnschrift').grid(row=1, column=5,sticky=EW)
 
 
 #   'Frame3'
+
+
 Button(frame3,text='Gravar Dados',background='black',foreground="white").grid(sticky=EW)
 Button(frame3,text='Listar Dados',background='black',foreground="white").grid(sticky=EW)
 
 
-
 #   'Run'
+
 
 root.mainloop()
