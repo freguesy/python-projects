@@ -12,15 +12,19 @@ root.grid_columnconfigure(2, weight=1)
 root.grid_columnconfigure(3, weight=1)
 root.grid_columnconfigure(4, weight=1)
 root.grid_columnconfigure(5, weight=1)
+root.grid_columnconfigure(6, weight=1)
+root.grid_columnconfigure(7, weight=1)
+root.grid_columnconfigure(8, weight=1)
+root.grid_columnconfigure(9, weight=1)
 
 
 #   'funçao'
 
 
 var =StringVar()
-def autocapitalize(*arg):
+def autocap(*arg):
     var.set(var.get().title())
-var.trace("w", autocapitalize)
+var.trace("w", autocap)
 
 
 #   'configuraçoes janela'
@@ -56,7 +60,7 @@ in4 = Entry(frame1, font='Bahnschrift').grid(row=1, column=5,sticky=EW)
 
 
 lb5 = Label(frame2, text='Rua:',font='Bahnschrift',background='black',foreground="white").grid(row=0, column=0,sticky=EW)
-in5 = Entry(frame2, font='Bahnschrift').grid(row=0, column=1,sticky=EW,columnspan=5,ipadx=100)
+in5 = Entry(frame2, font='Bahnschrift').grid(row=0, column=1,sticky=EW,columnspan=7,ipadx=100)
 
 lb6 = Label(frame2, text='N°:',font='Bahnschrift',background='black',foreground="white").grid(row=0, column=4,sticky=EW)
 in6 = Entry(frame2, font='Bahnschrift').grid(row=0, column=5,sticky=EW)
