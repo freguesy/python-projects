@@ -22,9 +22,9 @@ root.grid_columnconfigure(9, weight=1)
 
 
 var =StringVar()
-def autocap(*arg):
+def caps(*args):
     var.set(var.get().title())
-var.trace("w", autocap)
+var.trace("w", caps)
 
 
 #   'configuraçoes janela'
